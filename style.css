@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text-color: rgb(229, 226, 226);
+  --backgroung-color: #444;
+}
+body {
+  background-color: rgb(139, 138, 138);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding: 75px;
+}
+.header {
+  border: 2px solid var(--backgroung-color);
+  position: relative;
+}
+.head-title {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 50px;
+  padding: 20px 0px;
+  /* line-height: 80px; */
+}
+.start-number-hint {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.number-hint {
+  color: var(--text-color);
+  font-size: 15px;
+  padding-left: 14px;
+  padding-right: 20px;
+}
+
+.start-game {
+  background: none;
+  border: none;
+}
+
+.start-game i {
+  font-size: 20px;
+}
+
+.result {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  height: 150px;
+}
+
+.main-result {
+  background-color: var(--backgroung-color);
+  height: 7px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.game-result {
+  color: var(--text-color);
+  background-color: var(--backgroung-color);
+  font-size: 100px;
+  height: 150px;
+  width: 150px;
+  border: 2px solid var(--backgroung-color);
+  text-align: center;
+  position: absolute;
+  padding-top: 16px;
+}
+
+.main-player {
+  border: 2px solid var(--backgroung-color);
+  margin-top: 10%;
+  display: flex;
+  padding: 50px 0;
+}
+.main-input {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-number {
+  color: var(--text-color);
+  background-color: var(--backgroung-color);
+  border: 2px solid var(--backgroung-color);
+  text-align: center;
+  height: 150px;
+  width: 150px;
+  font-size: 100px;
+}
+
+.check-btn {
+  width: 100px;
+  margin-top: 10px;
+}
+.main-message {
+  color: var(--text-color);
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  line-height: 50px;
+
+  width: 50%;
+}
+.message {
+  color: var(--text-color);
+  font-size: 30px;
+}
+
+.label-score {
+  color: var(--text-color);
+  font-size: 30px;
+}
+.high-score {
+  color: var(--text-color);
+  font-size: 30px;
+}

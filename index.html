@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="index.js"></script>
+    <title>Game Project</title>
+  </head>
+  <body>
+
+    <div class="header">
+      <h1 class="head-title">Guess The Number</h1>
+      <div class="start-number-hint">
+        <button class="start-game" id="start-game">
+          <i class="fa">&#xf04b;</i>
+        </button>
+        <label class="number-hint"> Between 1 And 20 </label>
+      </div>
+    </div>
+
+    <div class="result">
+      <div class="main-result"></div>
+      <div class="game-result" id="game-result">?</div>
+    </div>
+    
+
+    <div class="main-player">
+      <div class="main-input">
+        <input type="text" class="input-number" id="input-number" value=""/>
+        <button class="check-btn" id="check-btn">CHECK!</button>
+      </div>
+      
+     
+      <div class="main-message">
+        <label class="message" id="message">Start Guessing...!</label>
+        <label class="label-score">Score: <span class="score-number" id="score-number">20</label></p>
+        <label class="high-score">
+          High Score: <span class="high-score-number" id="high-score-number">20</span>
+        </label>
+      </div>
+    </div>
+    
+  </body>
+</html>
