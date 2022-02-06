@@ -13,6 +13,16 @@
     <title>Game Project</title>
   </head>
   <body>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-btns">
+          <button id="btn-easy" class="btn-easy">Easy</button>
+          <button id="btn-medium" class="btn-medium">Medium</button>
+          <button id="btn-hard" class="btn-hard">Hard</button>
+        </div>
+       
+      </div>
+    </div>
 
     <div class="header">
       <h1 class="head-title">Guess The Number</h1>
@@ -32,7 +42,7 @@
 
     <div class="main-player">
       <div class="main-input">
-        <input type="text" class="input-number" id="input-number" value=""/>
+        <input type="text" class="input-number" id="input-number" value="" />
         <button class="check-btn" id="check-btn">CHECK!</button>
       </div>
       
@@ -41,7 +51,7 @@
         <label class="message" id="message">Start Guessing...!</label>
         <label class="label-score">Score: <span class="score-number" id="score-number">20</label></p>
         <label class="high-score">
-          High Score: <span class="high-score-number" id="high-score-number">20</span>
+          High Score: <span class="high-score-number" id="high-score-number">0</span>
         </label>
       </div>
     </div>
