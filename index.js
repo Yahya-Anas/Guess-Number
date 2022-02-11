@@ -10,23 +10,28 @@ window.addEventListener("load", function () {
   const btnMedium = document.querySelector("#btn-medium");
   const btnHard = document.querySelector("#btn-hard");
 
-  btnEasy.addEventListener("click", function () {
+  const easyLevel = function () {
     modal.style.display = "none";
-  });
+  };
 
-  btnMedium.addEventListener("click", function () {
+  const mediumLevel = function () {
     modal.style.display = "none";
     score = 10;
     level = 10;
     scoreNumber.textContent = score;
-  });
-
-  btnHard.addEventListener("click", function () {
+  };
+  const hardLevel = function () {
     modal.style.display = "none";
     score = 5;
     level = 5;
     scoreNumber.textContent = score;
-  });
+  };
+
+  btnEasy.addEventListener("click", easyLevel);
+
+  btnMedium.addEventListener("click", mediumLevel);
+
+  btnHard.addEventListener("click", hardLevel);
 
   let random = getRandomNumber();
   //gameResult.textContent = random;
@@ -72,11 +77,23 @@ window.addEventListener("load", function () {
     return Math.floor(Math.random() * 20) + 1;
   }
 
-  document.addEventListener("keypress", function (event) {
-    let keycode = event.keycode;
-    if (keycode > 48 && keycode < 57) {
-      return true;
+  document
+    .querySelector("#input-number")
+    .addEventListener("keypress", function (event) {
+      let keycode = event.keycode;
+      if (keycode > 48 && keycode < 57) {
+        return true;
+      }
+      return false;
+    });
+
+  document.addEventListener("keyup", function (e) {
+    if (e.key === "e" || e.key === "E") {
+      easyLevel();
+    } else if (e.key === "m" || e.key === "M") {
+      mediumLevel();
+    } else if (e.key === "h" || e.key === "H") {
+      hardLevel();
     }
-    return false;
   });
 });
